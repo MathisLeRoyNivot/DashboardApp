@@ -9,7 +9,7 @@
 </style>
 
 <div class="form-div">
-    <a href="{{ path('logout') }}">Se déconnecter</a>
+    <!--<a href="{{ path('logout') }}">Se déconnecter</a>-->
     <h1>CONNECTEZ-VOUS</h1>
 
     <hr class="form-hr">
@@ -19,17 +19,16 @@
     {% endif %}
 
     <form class="form-login" action="{{ path('login') }}" method="post">
-        <div class="input">
-            <i class="fas fa-user"></i>
-            <input class="username" type="text" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
-        </div>
 
-        <div class="input">
-            <i class="fas fa-key"></i>
-            <input type="password" name="_password" placeholder="Mot de passe">
-        </div>
-
+        <input class="username" type="text" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
+        <input type="password" name="_password" placeholder="Mot de passe">
         <button type="submit">Se connecter</button>
+
     </form>
+
+    <div class="bottom-form">
+        <p>Powered by</p>
+        <img src="../../assets/img/symfony.svg">
+    </div>
 </div>
 {% endblock %}

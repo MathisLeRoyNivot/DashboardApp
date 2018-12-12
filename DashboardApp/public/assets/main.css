@@ -10,20 +10,19 @@ body {
     width: 100%;
 }
 
-form {
-    margin: 0 auto;
-    width: 60%;
-}
-
 .form-div {
     background: #16181C;
     border: none;
     border-radius: 15px;
-    margin: 300px auto;
-    padding: 30px ;
+    left: 50%;
+    padding: 30px 30px 0px 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 500px;
 }
 
+/* STYLE TITRE */
 .form-div h1 {
     color: #ffffff;
     font-size: 30px;
@@ -41,9 +40,15 @@ form {
     width: 50%;
 }
 
+/* STYLE FORMULAIRE */
+form {
+    margin: 0 auto;
+    width: 60%;
+}
+
 .form-login input {
     background: #ffffff;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 5px;
     display: block;
     height: 35px;
@@ -53,17 +58,25 @@ form {
     width: 100%;
 }
 
-.input {
-    padding: 0 auto;
-    width: 100%;
-}
-
 .input i {
+    border-right: 1px solid black;
     font-size: 1.25em;
     position: absolute;
-    line-height: 35px;
-    margin: 0 auto;
+    line-height: 39px;
     margin-left: 7px;
+    padding-right: 5px;
+}
+
+.username {
+    background: url("../assets/img/user-solid.svg") blue no-repeat 1.25em;
+    line-height: 39px;
+    z-index: 10;
+}
+
+.password {
+    background: url("../assets/img/key-solid.svg") blue no-repeat 1.25em;
+    line-height: 39px;
+    z-index: 10;
 }
 
 ::placeholder {
@@ -78,11 +91,32 @@ form {
     border-bottom: 5px solid #1D6B3E;
     border-radius: 10px;
     color: #ffffff;
+    display: block;
     font-size: 15px;
     height: 35px;
     letter-spacing: 1.5px;
     margin: 0 auto;
-    right: 0;
     width: 150px;
+}
+
+/* STYLE BOTTOM FORMULAIRE */
+.bottom-form {
+    align-items: center;
+    align-content: center;
+    color: #6A6A6A;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin: 40px auto 5px auto;
+    text-align: center;
+}
+
+bottom-form p {
+    margin-left: 5px;
+}
+
+.bottom-form img {
+    height: auto;
+    width: 30px;
 }
 
