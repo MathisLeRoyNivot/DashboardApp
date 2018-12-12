@@ -5,7 +5,6 @@
 {% block body %}
 <style>
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    .error {color: red;}
 </style>
 
 <div class="form-div">
@@ -14,14 +13,16 @@
 
     <hr class="form-hr">
 
-    {% if error %}
-        <span class="error">{{ error.messageKey }}</span>
-    {% endif %}
-
     <form class="form-login" action="{{ path('login') }}" method="post">
 
         <input class="username" type="text" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
         <input type="password" name="_password" placeholder="Mot de passe">
+        <div class="error-div">
+            {% if error %}
+                <span class="error">{{ error.messageKey }}</span><br>
+                <span class="error">Veuillez saisir un identifiant et un mot de passe valides.</span>
+            {% endif %}
+        </div>
         <button type="submit">Se connecter</button>
 
     </form>
