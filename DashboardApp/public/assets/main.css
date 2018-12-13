@@ -158,3 +158,34 @@ bottom-form p {
 /*--------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------------------------------------- */
 /*--------------------------- STYLE - PAGE After Success Login -------------------------- */
+nav {
+    background-color: #16181C;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+}
+.nav-element {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+svg {
+    fill: #ffffff;
+}
+
+i.nav-logo {
+    color: #ffffff;
+    display: block;
+    font-size: 2.5em;
+    height: auto;
+}
+
+.main-container {
+    margin-left: 120px;
+}
+
+.content-container {
+    text-align: center;
+}
