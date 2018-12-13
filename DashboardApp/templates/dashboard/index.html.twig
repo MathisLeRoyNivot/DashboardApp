@@ -6,31 +6,34 @@
 
 <div class="example-wrapper">
     <nav>
-        <a class="nav-element" href="#">
-            <i class="material-icons nav-logo">home</i>
-            Accueil
-        </a>
+        <div class="nav-elements">
+            <a class="nav-item" href="#">
+                <i class="material-icons nav-logo">home</i>
+                Accueil
+            </a>
 
-        <a class="nav-element" href="#">
-            <i class="material-icons nav-logo">list</i>
-            Vote
-        </a>
+            <a class="nav-item" href="#">
+                <i class="material-icons nav-logo">list</i>
+                Vote
+            </a>
 
-        <a class="nav-element" href="#">
-            <i class="material-icons nav-logo">account_circle</i>
-            Profil
-        </a>
+            <a class="nav-item" href="#">
+                <i class="material-icons nav-logo">account_circle</i>
+                Profil
+            </a>
 
-        <a class="nav-element" href="{{ path('logout') }}">
-            <i class="fas fa-sign-out-alt nav-logo"></i>
-            Déconnexion
-        </a>
+            <a class="nav-item" href="{{ path('logout') }}">
+                <i class="fas fa-sign-out-alt nav-logo"></i>
+                Déconnexion
+            </a>
+        </div>
+
     </nav>
 
     <div class="main-container">
         <div class="content-container">
 
-            <h1>Hello {{ controller_name }}! ✅</h1>
+            <h1>Hello {{ controller_name }} ! ✅</h1>
 
             This friendly message is coming from:
             <ul>
