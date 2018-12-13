@@ -3,9 +3,6 @@
 {% block title %}Connectez-vous !{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 <div class="form-div">
     <!--<a href="{{ path('logout') }}">Se déconnecter</a>-->
@@ -37,7 +34,9 @@
 
     <div class="bottom-form">
         <p>Powered by</p>
-        <img src="../../assets/img/symfony.svg">
+        <a href="https://symfony.com/" target="_blank">
+            <img src="../../assets/img/symfony.svg">
+        </a>
     </div>
 </div>
 {% endblock %}
