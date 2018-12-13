@@ -15,8 +15,16 @@
 
     <form class="form-login" action="{{ path('login') }}" method="post">
 
-        <input class="username" type="text" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
-        <input type="password" name="_password" placeholder="Mot de passe">
+        <div class="input">
+            <i class="fas fa-user"></i>
+            <input class="username" type="text" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
+        </div>
+
+        <div class="input">
+            <i class="fas fa-key"></i>
+            <input type="password" name="_password" placeholder="Mot de passe">
+        </div>
+
         <div class="error-div">
             {% if error %}
                 <span class="error">{{ error.messageKey }}</span><br>
