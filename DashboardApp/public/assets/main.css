@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #25282F;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+.form-div {
+    background: #16181C;
+    border: none;
+    border-radius: 15px;
+    left: 50%;
+    padding: 30px 30px 0px 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+/* STYLE - Titre */
+.form-div h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.form-hr {
+    background: #ffffff;
+    color: #ffffff;
+    height: 1px;
+    margin: 30px auto 50px auto;
+    width: 50%;
+}
+
+/* STYLE - Formulaire */
+form {
+    margin: 0 auto;
+    width: 65%;
+}
+
+.form-login input {
+    background: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: #16181C;
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-indent: 35px;
+    width: 100%;
+}
+
+.form-login input[type="password"] {
+    margin-bottom: 5px;
+}
+
+.input i {
+    color: #16181C;
+    font-size: 1.4em;
+    position: absolute;
+    line-height: 39px;
+    margin-left: 8px;
+    padding-right: 5px;
+}
+
+.username {
+    background: url("../assets/img/user-solid.svg") blue no-repeat 1.25em;
+    line-height: 39px;
+    z-index: 10;
+}
+
+.password {
+    background: url("../assets/img/key-solid.svg") blue no-repeat 1.25em;
+    line-height: 39px;
+    z-index: 10;
+}
+
+::placeholder {
+    color: #A7A7A7;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* STYLE - Error message */
+.error-div {
+    height: 35px;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.error {
+    color: #c0392b;
+}
+
+/* STYLE - Bouton formulaire */
+.form-login button {
+    background: #27AE60;
+    border: none;
+    border-bottom: 4px solid #1D6B3E;
+    border-radius: 10px;
+    color: #ffffff;
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    width: 150px;
+}
+
+/* STYLE BOTTOM FORMULAIRE */
+.bottom-form {
+    align-items: center;
+    align-content: center;
+    color: #6A6A6A;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin: 70px auto 5px auto;
+    text-align: center;
+}
+
+bottom-form p {
+    margin-left: 5px;
+}
+
+.bottom-form img {
+    height: auto;
+    width: 30px;
+}
+

@@ -1,27 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello !{% endblock %}
+{% block title %}Connectez-vous !{% endblock %}
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    .error {color: red;}
 </style>
 
-<div class="example-wrapper">
-    <a href="{{ path('logout') }}">Se déconnecter</a>
-    <h1>Connexion</h1>
+<div class="form-div">
+    <!--<a href="{{ path('logout') }}">Se déconnecter</a>-->
+    <h1>CONNECTEZ-VOUS</h1>
 
-    {% if error %}
-        <span class="error">{{ error.messageKey }}</span>
-    {% endif %}
+    <hr class="form-hr">
 
-    <form action="{{ path('login') }}" method="post">
-        <input type="text" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
-        <input type="password" name="_password" placeholder="Mot de passe">
+    <form class="form-login" action="{{ path('login') }}" method="post">
 
+        <div class="input">
+            <i class="fas fa-user"></i>
+            <input class="username" type="text" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur">
+        </div>
+
+        <div class="input">
+            <i class="fas fa-key"></i>
+            <input type="password" name="_password" placeholder="Mot de passe">
+        </div>
+
+        <div class="error-div">
+            {% if error %}
+                <span class="error">{{ error.messageKey }}</span><br>
+                <span class="error">Veuillez saisir un identifiant et un mot de passe valides.</span>
+            {% endif %}
+        </div>
         <button type="submit">Se connecter</button>
+
     </form>
+
+    <div class="bottom-form">
+        <p>Powered by</p>
+        <img src="../../assets/img/symfony.svg">
+    </div>
 </div>
 {% endblock %}
