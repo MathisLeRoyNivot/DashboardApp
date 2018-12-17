@@ -168,6 +168,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     height: 60%;
+    margin-top: 50%;
 }
 .nav-item {
     color: #ffffff;
