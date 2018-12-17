@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dashboard - Accueil{% endblock %}
+{% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
 
@@ -33,12 +33,12 @@
     <div class="main-container">
         <div class="content-container">
 
-            <h1>Hello {{ controller_name }} ! ✅</h1>
+            <h1>Hello {{ controller_name }}! ✅</h1>
 
             This friendly message is coming from:
             <ul>
-                <li>Your controller at <code><a href="{{ 'src/Controller/DashboardController.php'|file_link(0) }}">src/Controller/DashboardController.php</a></code></li>
-                <li>Your template at <code><a href="{{ 'templates/dashboard/index.html.twig'|file_link(0) }}">templates/dashboard/index.html.twig</a></code></li>
+                <li>Your controller at <code><a href="{{ 'src/Controller/ProfileController.php'|file_link(0) }}">src/Controller/ProfileController.php</a></code></li>
+                <li>Your template at <code><a href="{{ 'templates/profile/index.html.twig'|file_link(0) }}">templates/profile/index.html.twig</a></code></li>
             </ul>
 
         </div>
