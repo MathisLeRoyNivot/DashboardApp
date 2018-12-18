@@ -1,14 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello
-    {{ controller_name }}!{% endblock %}
+{% block title %}Dashboard | Votre profil{% endblock %}
 
 {% block body %}
 
     <div class="example-wrapper">
         <nav>
             <div class="nav-elements">
-                <a class="nav-item home-icon tooltip active-home" href="{{ path('dashboard') }}">
+                <a class="nav-item home-icon tooltip" href="{{ path('dashboard') }}">
                     <i class="material-icons nav-logo ">home</i>
                     <span class="tooltiptext">Accueil</span>
                 </a>
@@ -18,7 +17,7 @@
                     <span class="tooltiptext">Liste</span>
                 </a>
 
-                <a class="nav-item profil-icon tooltip" href="{{ path('profile') }}">
+                <a class="nav-item profil-icon tooltip active-profile" href="{{ path('profile') }}">
                     <i class="material-icons nav-logo">account_circle</i>
                     <span class="tooltiptext">Profil</span>
                 </a>
