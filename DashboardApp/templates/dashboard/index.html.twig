@@ -1,20 +1,63 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Dashboard - Accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="example-wrapper">
+        <nav>
+            <div class="nav-elements">
+                <a class="nav-item home-icon tooltip active-home" href="{{ path('dashboard') }}">
+                    <i class="material-icons nav-logo ">home</i>
+                    <span class="tooltiptext">Accueil</span>
+                </a>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/DashboardController.php'|file_link(0) }}">src/Controller/DashboardController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/dashboard/index.html.twig'|file_link(0) }}">templates/dashboard/index.html.twig</a></code></li>
-    </ul>
-</div>
+                <a class="nav-item list-icon tooltip" href="#">
+                    <i class="material-icons nav-logo">list</i>
+                    <span class="tooltiptext">Liste</span>
+                </a>
+
+                <a class="nav-item profil-icon tooltip" href="{{ path('profile') }}">
+                    <i class="material-icons nav-logo">account_circle</i>
+                    <span class="tooltiptext">Profil</span>
+                </a>
+            </div>
+            <div class="logout-element">
+                <a class="nav-item logout-icon tooltip" href="{{ path('logout') }}">
+                    <i class="fas fa-sign-out-alt nav-logo"></i>
+                    <span class="tooltiptext">Déconnexion</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="main-container">
+            <div class="content-container">
+
+                <h1>Hello
+                    {{ controller_name }}
+                    ! ✅</h1>
+
+                This friendly message is coming from:
+                <ul>
+                    <li>Your controller at
+                        <code>
+                            <a href="{{ 'src/Controller/DashboardController.php'|file_link(0) }}">src/Controller/DashboardController.php</a>
+                        </code>
+                    </li>
+                    <li>Your template at
+                        <code>
+                            <a href="{{ 'templates/dashboard/index.html.twig'|file_link(0) }}">templates/dashboard/index.html.twig</a>
+                        </code>
+                    </li>
+                </ul>
+
+                <p>Welcome,
+                    {{ app.user.username }}
+                </p>
+
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

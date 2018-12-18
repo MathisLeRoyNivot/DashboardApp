@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #25282f;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  height: 100vh;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------------------- */
+/*--------------------------- STYLE - PAGE PRINCIPALE - Login --------------------------- */
+.form-div {
+  background: #16181c;
+  border: none;
+  border-radius: 15px;
+  left: 50%;
+  padding: 30px 30px 0px 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+/* STYLE - Titre */
+.form-div h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  margin-bottom: 0;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.form-hr {
+  background: #ffffff;
+  color: #ffffff;
+  height: 1px;
+  margin: 30px auto 50px auto;
+  width: 50%;
+}
+
+/* STYLE - Formulaire */
+form {
+  margin: 0 auto;
+  width: 65%;
+}
+
+.form-login input {
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: #16181c;
+  display: block;
+  font-size: 15px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-indent: 35px;
+  width: 100%;
+}
+
+.form-login input[type="password"] {
+  margin-bottom: 7px;
+}
+
+.input i {
+  color: #16181c;
+  font-size: 1.4em;
+  position: absolute;
+  line-height: 39px;
+  margin-left: 8px;
+  padding-right: 5px;
+}
+
+.username {
+  background: url("../assets/img/user-solid.svg") blue no-repeat 1.25em;
+  line-height: 39px;
+  z-index: 10;
+}
+
+.password {
+  background: url("../assets/img/key-solid.svg") blue no-repeat 1.25em;
+  line-height: 39px;
+  z-index: 10;
+}
+
+::placeholder {
+  color: #a7a7a7;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* STYLE - Error message */
+.error-div {
+  height: 33px;
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.error {
+  color: #c0392b;
+}
+
+/* STYLE - Bouton formulaire */
+.form-login button {
+  background: #27ae60;
+  border: none;
+  border-bottom: 4px solid #1d6b3e;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  height: 35px;
+  letter-spacing: 1.5px;
+  margin-left: calc(100% - 150px);
+  width: 150px;
+  position: relative;
+}
+
+.form-login button:hover {
+  background: #219552;
+  border-bottom: 4px solid #1d6b3e;
+}
+
+/* STYLE BOTTOM FORMULAIRE */
+.bottom-form {
+  align-items: center;
+  align-content: center;
+  color: #6a6a6a;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin: 70px auto 5px auto;
+  text-align: center;
+}
+
+bottom-form p {
+  margin-left: 5px;
+}
+
+.bottom-form img {
+  height: auto;
+  width: 30px;
+}
+
+/*--------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------------------- */
+/*--------------------------- STYLE - PAGE After Success Login -------------------------- */
+nav {
+  background-color: #16181c;
+  height: 100vh;
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100px;
+}
+
+.nav-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  margin-top: 50%;
+  margin-bottom: 37vh;
+}
+.nav-item {
+  color: #ffffff;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.home-icon {
+  color: #ffffff;
+  border-left: 5px transparent solid;
+}
+
+.home-icon:hover {
+  color: #fa983a;
+  border-left: 5px solid #fa983a;
+}
+
+.active-home {
+  color: #fa983a;
+  border-left: 5px solid #fa983a;
+}
+
+.list-icon {
+  color: #ffffff;
+  border-left: 5px transparent solid;
+}
+
+.list-icon:hover {
+  color: #78e08f;
+  border-left: 5px solid #78e08f;
+}
+
+.profil-icon {
+  color: #ffffff;
+  border-left: 5px transparent solid;
+}
+
+.profil-icon:hover {
+  color: #4a69bd;
+  border-left: 5px solid #4a69bd;
+}
+
+.logout-icon {
+  color: #ffffff;
+  border-left: 5px transparent solid;
+}
+
+.logout-icon:hover {
+  color: #e55039;
+  border-left: 5px solid #e55039;
+}
+
+.logout-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10%;
+}
+
+.active-profil {
+  color: #4a69bd;
+  border-left: 5px solid #4a69bd;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 0.75em;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+svg {
+  fill: #ffffff;
+}
+
+i.nav-logo {
+  display: block;
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  height: auto;
+}
+
+.main-container {
+  margin-left: 100px;
+}
+
+.content-container {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------------------- */
+/*--------------------------- STYLE - PAGE Profile -------------------------------------- */
+
+.card {
+  margin: 0 auto;
+  background: #ffffff;
+  width: 45%;
+  height: 75vh;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 50vh;
+  margin-left: 50vh;
+  transform: translateX(calc(-50% - 100px));
+  transform: translateY(-50%);
+  position: absolute;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.card-banner {
+  background: url("https://images.unsplash.com/photo-1545005313-3e77ea8b030e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  width: 100%;
+  height: 20%;
+  padding-top: 35px;
+  background-color: #fafafa;
+  background-position: top;
+  background-size: cover;
+}
+
+.card-profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto auto;
+  background-size: cover;
+  background-color: #f1f1f1;
+  border: 3px solid #fff;
+  margin-top: 10%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  text-align: center;
+}
+
+i.user-photo {
+  font-size: 6.3em;
+  margin: auto auto;
+  color: #000;
+}
+
+h3,
+a,
+i {
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #212121;
+}
+a,
+p {
+  display: block;
+  padding: 5px 0px;
+  font-size: 14px;
+  color: #9e9e9e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.progress-bars-top {
+  display: flex;
+
+  margin-left: 10%;
+}
