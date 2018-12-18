@@ -186,9 +186,9 @@ active-home {
   border-left: 5px solid #fa983a;
 }
 
-a.home-icon:hover {
-  color: #fa983a;
-  border-left: 5px solid #fa983a;
+.home-icon:hover {
+    color: #fa983a;
+    border-left: 5px solid #fa983a;
 }
 
 .list-icon {
@@ -196,7 +196,7 @@ a.home-icon:hover {
     border-left: 5px transparent solid;
 }
 
-a.list-icon:hover {
+.list-icon:hover {
     color: #78e08f;
     border-left: 5px solid #78e08f;
 }
@@ -206,7 +206,7 @@ a.list-icon:hover {
     border-left: 5px transparent solid;
 }
 
-a.profil-icon:hover {
+.profil-icon:hover {
     color: #4a69bd;
     border-left: 5px solid #4a69bd;
 }
@@ -220,9 +220,10 @@ active-profile {
     color: #ffffff;
     border-left: 5px transparent solid;
     bottom: 0;
+    left: 0;
 }
 
-a.logout-icon:hover {
+.logout-icon:hover {
     color: #e55039;
     border-left: 5px solid #e55039;
 }
