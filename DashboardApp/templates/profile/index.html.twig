@@ -1,47 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Hello
+    {{ controller_name }}!{% endblock %}
 
 {% block body %}
 
-<div class="example-wrapper">
-    <nav>
-        <div class="nav-elements">
-            <a class="nav-item" href="{{ path('dashboard') }}">
-                <i class="material-icons nav-logo">home</i>
-                Accueil
-            </a>
+    <div class="example-wrapper">
+        <nav>
+            <div class="nav-elements">
+                <a class="nav-item" href="{{ path('dashboard') }}">
+                    <i class="material-icons nav-logo">home</i>
+                    Accueil
+                </a>
 
-            <a class="nav-item" href="#">
-                <i class="material-icons nav-logo">list</i>
-                Vote
-            </a>
+                <a class="nav-item" href="#">
+                    <i class="material-icons nav-logo">list</i>
+                    Vote
+                </a>
 
-            <a class="nav-item" href="{{ path('profile') }}">
-                <i class="material-icons nav-logo">account_circle</i>
-                Profil
-            </a>
+                <a class="nav-item" href="{{ path('profile') }}">
+                    <i class="material-icons nav-logo">account_circle</i>
+                    Profil
+                </a>
 
-            <a class="nav-item" href="{{ path('logout') }}">
-                <i class="fas fa-sign-out-alt nav-logo"></i>
-                Déconnexion
-            </a>
-        </div>
+                <a class="nav-item" href="{{ path('logout') }}">
+                    <i class="fas fa-sign-out-alt nav-logo"></i>
+                    Déconnexion
+                </a>
+            </div>
 
-    </nav>
+        </nav>
 
-    <div class="main-container">
-        <div class="content-container">
-
-            <h1>Hello {{ controller_name }}! ✅</h1>
-
-            This friendly message is coming from:
-            <ul>
-                <li>Your controller at <code><a href="{{ 'src/Controller/ProfileController.php'|file_link(0) }}">src/Controller/ProfileController.php</a></code></li>
-                <li>Your template at <code><a href="{{ 'templates/profile/index.html.twig'|file_link(0) }}">templates/profile/index.html.twig</a></code></li>
-            </ul>
-
-            <p>Welcome, {{ app.user.username }} </p>
+        <div class="main-container">
+            <div class="content-container">
+                <div class="card">
+                    <div class="card-banner">
+                        <div class="card-profile">
+                            <i class="fas fa-user-circle user-photo"></i>
+                        </div>
+                        <h3>{{ app.user.username }}</h3>
+                        <a mailto:example@email.com="mailto:example@email.com">example@email.com</a>
+                        <p>+57 333 333 3333</p>
+                        
+                        <div class="progress-bars-top">
+                            <progress value="22" max="100"></progress>
+                            <progress value="57" max="100"></progress>
+                        </div>
+                        <div class="progress-bars-bottom">
+                            <progress value="22" max="100"></progress>
+                            <progress value="57" max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

@@ -16,4 +16,10 @@ class DashboardController extends AbstractController
             'controller_name' => 'DashboardController',
         ]);
     }
+
+    public function recover_profile()
+    {
+        $this->get('security.token_storage')->getToken()->getUser();
+        $user->getUsername();
+    }
 }
