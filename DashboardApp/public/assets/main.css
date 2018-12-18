@@ -181,9 +181,14 @@ nav {
     border-left: 5px transparent solid;
 }
 
+active-home {
+  color: #fa983a;
+  border-left: 5px solid #fa983a;
+}
+
 a.home-icon:hover {
-    color: #fa983a;
-    border-left: 5px solid #fa983a;
+  color: #fa983a;
+  border-left: 5px solid #fa983a;
 }
 
 .list-icon {
@@ -196,7 +201,7 @@ a.list-icon:hover {
     border-left: 5px solid #78e08f;
 }
 
-.profil-icon-icon {
+.profil-icon {
     color: #ffffff;
     border-left: 5px transparent solid;
 }
@@ -204,6 +209,11 @@ a.list-icon:hover {
 a.profil-icon:hover {
     color: #4a69bd;
     border-left: 5px solid #4a69bd;
+}
+
+active-profile {
+  color: #4a69bd;
+  border-left: 5px solid #4a69bd;
 }
 
 .logout-icon {
@@ -347,4 +357,3 @@ p {
     display: flex;
     margin-left: 10%;
 }
-
