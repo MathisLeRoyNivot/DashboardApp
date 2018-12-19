@@ -34,30 +34,26 @@
         <div class="main-container">
             <div class="content-container">
 
-                <h1>Hello
-                    {{ controller_name }}
-                    ! ✅</h1>
-
-                This friendly message is coming from:
-                <ul>
-                    <li>Your controller at
-                        <code>
-                            <a href="{{ 'src/Controller/DashboardController.php'|file_link(0) }}">src/Controller/DashboardController.php</a>
-                        </code>
-                    </li>
-                    <li>Your template at
-                        <code>
-                            <a href="{{ 'templates/dashboard/index.html.twig'|file_link(0) }}">templates/dashboard/index.html.twig</a>
-                        </code>
-                    </li>
-                </ul>
-
-                <p>Welcome,
+                <h2 class="hello">
+                    Bonjour
                     {{ app.user.username }}
-                </p>
+                    !
+                </h2>
 
+                <div class="marks_screen">
+                    <i class="fas fa-graduation-cap notes_logo"></i>
+                    <h2 class="heading">Notes</h2>
+                </div>
+
+                <div class="marks_screen2">
+                    <i class="fas fa-clock ra_logo"></i>
+                    <h2 class="heading">Retards & Absences</h2>
+                </div>
             </div>
         </div>
 
     </div>
+</div>
+
+</div>
 {% endblock %}
