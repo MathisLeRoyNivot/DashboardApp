@@ -167,8 +167,9 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60%;
+  height: 50%;
   margin-top: 50%;
+  margin-bottom: 37vh;
 }
 .nav-item {
   color: #ffffff;
@@ -177,8 +178,13 @@ nav {
 }
 
 .home-icon {
-    color: #ffffff;
-    border-left: 5px transparent solid;
+  color: #ffffff;
+  border-left: 5px transparent solid;
+}
+
+.home-icon:hover {
+  color: #fa983a;
+  border-left: 5px solid #fa983a;
 }
 
 .active-home {
@@ -186,24 +192,19 @@ nav {
   border-left: 5px solid #fa983a;
 }
 
-.home-icon:hover {
-    color: #fa983a;
-    border-left: 5px solid #fa983a;
-}
-
 .list-icon {
-    color: #ffffff;
-    border-left: 5px transparent solid;
+  color: #ffffff;
+  border-left: 5px transparent solid;
 }
 
 .list-icon:hover {
-    color: #78e08f;
-    border-left: 5px solid #78e08f;
+  color: #78e08f;
+  border-left: 5px solid #78e08f;
 }
 
 .profil-icon {
-    color: #ffffff;
-    border-left: 5px transparent solid;
+  color: #ffffff;
+  border-left: 5px transparent solid;
 }
 
 .profil-icon:hover {
@@ -217,49 +218,59 @@ nav {
 }
 
 .logout-icon {
-    color: #ffffff;
-    border-left: 5px transparent solid;
-    bottom: 0;
-    left: 0;
+  color: #ffffff;
+  border-left: 5px transparent solid;
 }
 
 .logout-icon:hover {
-    color: #e55039;
-    border-left: 5px solid #e55039;
+  color: #e55039;
+  border-left: 5px solid #e55039;
+}
+
+.logout-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10%;
+}
+
+.active-profil {
+  color: #4a69bd;
+  border-left: 5px solid #4a69bd;
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 0.75em;
-    left: 110%;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 0.75em;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 svg {
   fill: #ffffff;
@@ -293,7 +304,7 @@ i.nav-logo {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-top: 50vh; 
+  margin-top: 50vh;
   margin-left: 50vh;
   transform: translateX(calc(-50% - 100px));
   transform: translateY(-50%);
@@ -326,9 +337,9 @@ i.nav-logo {
 }
 
 i.user-photo {
-    font-size: 6.3em;
-    margin: auto auto;
-    color: #000;
+  font-size: 6.3em;
+  margin: auto auto;
+  color: #000;
 }
 
 h3,
@@ -356,6 +367,7 @@ p {
 }
 
 .progress-bars-top {
-    display: flex;
-    margin-left: 10%;
+  display: flex;
+
+  margin-left: 10%;
 }
