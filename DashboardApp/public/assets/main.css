@@ -208,6 +208,11 @@ nav {
 }
 
 .profil-icon:hover {
+    color: #4a69bd;
+    border-left: 5px solid #4a69bd;
+}
+
+.active-profile {
   color: #4a69bd;
   border-left: 5px solid #4a69bd;
 }
@@ -350,6 +355,7 @@ h3 {
   font-size: 18px;
   color: #212121;
 }
+
 a,
 p {
   display: block;
