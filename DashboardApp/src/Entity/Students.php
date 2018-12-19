@@ -27,9 +27,10 @@ class Students
     private $firstname;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\OneToOne(targetEntity="App\Entity\User", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $birthdate;
+    private $email;
 
     public function getId(): ?int
     {
@@ -60,14 +61,14 @@ class Students
         return $this;
     }
 
-    public function getBirthdate(): ?\DateTimeInterface
+    public function getEmail(): ?User
     {
-        return $this->birthdate;
+        return $this->email;
     }
 
-    public function setBirthdate(\DateTimeInterface $birthdate): self
+    public function setEmail(User $email): self
     {
-        $this->birthdate = $birthdate;
+        $this->email = $email;
 
         return $this;
     }
