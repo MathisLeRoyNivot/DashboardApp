@@ -320,7 +320,7 @@ i.nav-logo {
   width: 35%;
   height: 50vh;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin-top: 45vh;
   margin-left: 15vh;
@@ -339,10 +339,25 @@ i.nav-logo {
   width: 35%;
   height: 50vh;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin-top: 45vh;
   margin-left: 100vh;
+  transform: translateX(calc(-10% ));
+  transform: translateY(-70%);
+  position: absolute;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.marks_screen3 {
+  background: #e0e3e5;
+  width: 77.8%;
+  height: 30vh;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-top: 85vh;
+  margin-left: 15vh;
   transform: translateX(calc(-10% ));
   transform: translateY(-70%);
   position: absolute;
