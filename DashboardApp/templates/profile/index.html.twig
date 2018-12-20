@@ -12,7 +12,7 @@
                     <span class="tooltiptext">Accueil</span>
                 </a>
 
-                <a class="nav-item list-icon tooltip" href="#">
+                <a class="nav-item list-icon tooltip" href="{{ path('list') }}">
                     <i class="material-icons nav-logo">list</i>
                     <span class="tooltiptext">Liste</span>
                 </a>
@@ -31,28 +31,64 @@
         </nav>
 
         <div class="main-container">
+
             <div class="content-container">
                 <div class="card">
                     <div class="card-banner">
                         <div class="card-profile">
                             <i class="fas fa-user-circle user-photo"></i>
                         </div>
-                        <h3>{{ app.user.username }}</h3>
-                        <p>+57 333 333 3333</p>
+                        <h3>Votre profil</h3>
+                        <hr>
 
-                        <div class="progress-bars-top">
-                            <progress value="22" max="100"></progress>
-                            <progress value="57" max="100"></progress>
+                        <div class="info1">
+                            <div class="personnal-info">
+                                <p class="tag-info">Nom :</p>
+                                <p>'ici votre nom'</p>
+                            </div>
+
+                            <div class="personnal-info">
+                                <p class="tag-info">Prénom :</p>
+                                <p>'ici votre prénom'</p>
+                            </div>
+
+                            <div class="personnal-info">
+                                <p class="tag-info">Nom d'utilisateur :</p>
+                                <p>{{ app.user.username }}</p>
+                            </div>
+
+                            <div class="personnal-info">
+                                <p class="tag-info">Adresse email :</p>
+                                <p>{{ app.user.email }}</p>
+                            </div>
                         </div>
-                        <div class="progress-bars-bottom">
-                            <progress value="22" max="100"></progress>
-                            <progress value="57" max="100"></progress>
+
+
+                        <h3>Statistiques générales</h3>
+                        <div class="progress-bars">
+                            <div class="personnal-stat">
+                                <p>Développement</p>
+                                <progress value="15" max="20"></progress>
+                            </div>
+                            <div class="personnal-stat">
+                                <p>Réseau</p>
+                                <progress value="10" max="20"></progress>
+                            </div>
+                            <div class="personnal-stat">
+                                <p>Base de données</p>
+                                <progress value="15" max="20"></progress>
+                            </div>
+                            <div class="personnal-stat">
+                                <p>Ponctualité</p>
+                                <progress value="100" max="100"></progress>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
 
 </div>
