@@ -17,7 +17,8 @@ class Marks
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\OneToOne(targetEntity="App\Entity\Students", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
     private $id_student;
 
@@ -36,22 +37,17 @@ class Marks
      */
     private $mark_bdd;
 
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $average;
-
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getIdStudent(): ?int
+    public function getIdStudent(): ?Students
     {
         return $this->id_student;
     }
 
-    public function setIdStudent(int $id_student): self
+    public function setIdStudent(Students $id_student): self
     {
         $this->id_student = $id_student;
 
@@ -90,18 +86,6 @@ class Marks
     public function setMarkBdd(float $mark_bdd): self
     {
         $this->mark_bdd = $mark_bdd;
-
-        return $this;
-    }
-
-    public function getAverage(): ?float
-    {
-        return $this->average;
-    }
-
-    public function setAverage(float $average): self
-    {
-        $this->average = $average;
 
         return $this;
     }
