@@ -6,9 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\User;
 
-class DashboardController extends AbstractController
+class ListController extends AbstractController
 {
-
     public function recover_all_user()
     {
         $users = $this->getDoctrine()
@@ -20,23 +19,15 @@ class DashboardController extends AbstractController
     }
 
     /**
-     * @Route("/", name="dashboard")
+     * @Route("/liste", name="list")
      */
     public function index()
     {
         $users = $this->recover_all_user();
 
-        return $this->render('dashboard/index.html.twig', [
-            'controller_name' => 'DashboardController',
+        return $this->render('list/index.html.twig', [
+            'controller_name' => 'ListController',
             'users' => $users
         ]);
-    }
-
-
-
-    public function recover_profile()
-    {
-        $this->get('security.token_storage')->getToken()->getUser();
-        $user->getUsername();
     }
 }

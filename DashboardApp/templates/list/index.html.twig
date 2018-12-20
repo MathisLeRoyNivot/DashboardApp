@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+
+
+    <nav>
+        <div class="nav-elements">
+            <a class="nav-item home-icon tooltip" href="{{ path('dashboard') }}">
+                <i class="material-icons nav-logo ">home</i>
+                <span class="tooltiptext">Accueil</span>
+            </a>
+
+            <a class="nav-item list-icon tooltip active-list" href="{{ path('list') }}">
+                <i class="material-icons nav-logo">list</i>
+                <span class="tooltiptext">Liste</span>
+            </a>
+
+            <a class="nav-item profil-icon tooltip" href="{{ path('profile') }}">
+                <i class="material-icons nav-logo">account_circle</i>
+                <span class="tooltiptext">Profil</span>
+            </a>
+        </div>
+        <div class="logout-element">
+            <a class="nav-item logout-icon tooltip" href="{{ path('logout') }}">
+                <i class="fas fa-sign-out-alt nav-logo"></i>
+                <span class="tooltiptext">Déconnexion</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <div class="main-container">
+        <div class="content-container">
+            <h1>Hello {{ controller_name }}! ✅</h1>
+
+            <ul>
+                {% for user in users %}
+                    <div>
+                        {{ user.username }}
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+
+{% endblock %}

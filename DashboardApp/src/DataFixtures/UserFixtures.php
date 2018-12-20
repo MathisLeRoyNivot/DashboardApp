@@ -338,8 +338,8 @@ class UserFixtures extends Fixture
 
         // RU - Romain Scheidecker
         $user = new User();
-        $user->setUsername('romain.scheidecker');
-        $user->setEmail('romain.scheidecker@ynov.com');
+        $user->setUsername('romain.schedeicker');
+        $user->setEmail('romain.schedeicker@ynov.com');
         $user->setPassword(
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );

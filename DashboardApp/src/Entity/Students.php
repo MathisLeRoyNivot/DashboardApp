@@ -30,7 +30,7 @@ class Students
      * @ORM\OneToOne(targetEntity="App\Entity\User", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
-    private $email;
+    private $id_user;
 
     public function getId(): ?int
     {
@@ -61,14 +61,14 @@ class Students
         return $this;
     }
 
-    public function getEmail(): ?User
+    public function getIdUser(): ?User
     {
-        return $this->email;
+        return $this->id_user;
     }
 
-    public function setEmail(User $email): self
+    public function setIdUser(User $id_user): self
     {
-        $this->email = $email;
+        $this->id_user = $id_user;
 
         return $this;
     }
