@@ -11,6 +11,20 @@ body {
   width: 100%;
 }
 
+hr {
+  margin: 30px auto;
+  width: 60%;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  width: 150px;
+  height: 15px;
+}
+
 /*--------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------------------------------------- */
 /*--------------------------- STYLE - PAGE PRINCIPALE - Login --------------------------- */
@@ -202,6 +216,11 @@ nav {
   border-left: 5px solid #78e08f;
 }
 
+.active-list {
+  color: #78e08f;
+  border-left: 5px solid #78e08f;
+}
+
 .profil-icon {
   color: #ffffff;
   border-left: 5px transparent solid;
@@ -370,16 +389,34 @@ p {
   text-decoration: none;
 }
 
+.info1 {
+  margin: 0 auto;
+}
+
 .progress-bars {
   margin-top: 25px;
 }
 
-.personnal-stat {
+.personnal-info {
   diplay: flex;
+}
+
+.personnal-info .tag-info {
+  display: inline-block;
+  text-align: left;
+  width: 20%;
+}
+
+.personnal-info p {
+  display: inline-block;
+  text-align: left;
+  width: 30%;
 }
 
 .personnal-stat p {
   display: inline-block;
+  text-align: left;
+  width: 30%;
 }
 
 progress {

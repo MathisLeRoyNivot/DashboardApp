@@ -12,7 +12,7 @@
                     <span class="tooltiptext">Accueil</span>
                 </a>
 
-                <a class="nav-item list-icon tooltip" href="#">
+                <a class="nav-item list-icon tooltip" href="{{ path('list') }}">
                     <i class="material-icons nav-logo">list</i>
                     <span class="tooltiptext">Liste</span>
                 </a>
@@ -40,10 +40,28 @@
                         </div>
                         <h3>Votre profil</h3>
                         <hr>
-                        <p>Nom : <span>'ici votre nom'</span></p>
-                        <p>Prénom : <span>'ici votre prénom'</span></p>
-                        <p>Nom d'utilisateur : <span>{{ app.user.username }}</span></p>
-                        <p>Adresse email : <span>{{ app.user.email }}</span></p>
+
+                        <div class="info1">
+                            <div class="personnal-info">
+                                <p class="tag-info">Nom :</p>
+                                <p>'ici votre nom'</p>
+                            </div>
+
+                            <div class="personnal-info">
+                                <p class="tag-info">Prénom :</p>
+                                <p>'ici votre prénom'</p>
+                            </div>
+
+                            <div class="personnal-info">
+                                <p class="tag-info">Nom d'utilisateur :</p>
+                                <p>{{ app.user.username }}</p>
+                            </div>
+
+                            <div class="personnal-info">
+                                <p class="tag-info">Adresse email :</p>
+                                <p>{{ app.user.email }}</p>
+                            </div>
+                        </div>
 
 
                         <h3>Statistiques générales</h3>
