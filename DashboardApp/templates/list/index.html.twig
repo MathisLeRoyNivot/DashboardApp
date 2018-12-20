@@ -35,13 +35,19 @@
         <div class="content-container">
             <h1>Hello {{ controller_name }}! ✅</h1>
 
-            <ul>
+            <table>
+                <tr>
+                    <th>Nom d'utilisateur</th>
+                    <th>Email</th>
+                </tr>
                 {% for user in users %}
-                    <div>
-                        {{ user.username }}
-                    </div>
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
                 {% endfor %}
-            </ul>
+            </table>
+
         </div>
     </div>
 
