@@ -37,6 +37,11 @@ class Marks
      */
     private $mark_bdd;
 
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $mark_punctuality;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Marks
     public function setMarkBdd(float $mark_bdd): self
     {
         $this->mark_bdd = $mark_bdd;
+
+        return $this;
+    }
+
+    public function getMarkPunctuality(): ?float
+    {
+        return $this->mark_punctuality;
+    }
+
+    public function setMarkPunctuality(float $mark_punctuality): self
+    {
+        $this->mark_punctuality = $mark_punctuality;
 
         return $this;
     }
