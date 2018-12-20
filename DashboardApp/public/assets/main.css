@@ -310,6 +310,57 @@ i.nav-logo {
   text-align: center;
 }
 
+.hello {
+  float: right;
+  margin: 1%;
+}
+
+.marks_screen {
+  background: #e0e3e5;
+  width: 35%;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-top: 45vh;
+  margin-left: 15vh;
+  transform: translateX(calc(-10% - 100px));
+  transform: translateY(-70%);
+  position: absolute;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.heading {
+  color: #000;
+}
+
+.marks_screen2 {
+  background: #e0e3e5;
+  width: 35%;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-top: 45vh;
+  margin-left: 100vh;
+  transform: translateX(calc(-10% ));
+  transform: translateY(-70%);
+  position: absolute;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.notes_logo {
+  font-size: 2.5em;
+  margin-top: 0.5%;
+  color: #000;
+}
+
+.ra_logo {
+  margin-top: 0.5%;
+  font-size: 2.5em;
+  color: #000;
+}
+
 /*--------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------------------------------------- */
 /*--------------------------- STYLE - PAGE Profile -------------------------------------- */
