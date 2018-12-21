@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -19,7 +18,7 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $username;
 
@@ -29,14 +28,44 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $firstname;
 
     /**
      * @ORM\Column(type="boolean")
      */
     private $user_type;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $mark_dev;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $mark_network;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $mark_bdd;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $mark_punctuality;
 
     public function getId(): ?int
     {
@@ -79,6 +108,30 @@ class User implements UserInterface
         return $this;
     }
 
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
     public function getUserType(): ?bool
     {
         return $this->user_type;
@@ -91,8 +144,55 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getRoles()
+    public function getMarkDev(): ?float
     {
+        return $this->mark_dev;
+    }
+
+    public function setMarkDev(float $mark_dev): self
+    {
+        $this->mark_dev = $mark_dev;
+
+        return $this;
+    }
+
+    public function getMarkNetwork(): ?float
+    {
+        return $this->mark_network;
+    }
+
+    public function setMarkNetwork(float $mark_network): self
+    {
+        $this->mark_network = $mark_network;
+
+        return $this;
+    }
+
+    public function getMarkBdd(): ?float
+    {
+        return $this->mark_bdd;
+    }
+
+    public function setMarkBdd(float $mark_bdd): self
+    {
+        $this->mark_bdd = $mark_bdd;
+
+        return $this;
+    }
+
+    public function getMarkPunctuality(): ?float
+    {
+        return $this->mark_punctuality;
+    }
+
+    public function setMarkPunctuality(float $mark_punctuality): self
+    {
+        $this->mark_punctuality = $mark_punctuality;
+
+        return $this;
+    }
+
+    public function getRoles() {
         return [
             'ROLE_USER'
         ];
@@ -120,25 +220,4 @@ class User implements UserInterface
     {
         // TODO: Implement eraseCredentials() method.
     }
-
-    /* public function serialize() {
-        return serialize([
-            $this->id,
-            $this->username,
-            $this->email,
-            $this->password,
-            $this->user_type,
-        ]);
-    }
-
-    public function unserialize() {
-        list(
-            $this->id,
-            $this->username,
-            $this->email,
-            $this->password,
-            $this->user_type,
-            ) = unserialize($string, ['allowed_classes' => false]);
-    } */
-
 }

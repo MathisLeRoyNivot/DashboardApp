@@ -5,12 +5,10 @@ namespace App\DataFixtures;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoder;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-class UserFixtures extends Fixture
+class UsersFixtures extends Fixture
 {
-
     private $encoder;
 
     public function __construct(UserPasswordEncoderInterface $encoder)
@@ -18,9 +16,9 @@ class UserFixtures extends Fixture
         $this->encoder = $encoder;
     }
 
+
     public function load(ObjectManager $manager)
     {
-
         // ADMIN USERS
         // AU - Mathis Le Roy-Nivot
         $user = new User();
@@ -30,6 +28,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(1);
+        $user->setLastname('Le Roy-Nivot');
+        $user->setFirstname('Mathis');
+        $user->setMarkDev(15);
+        $user->setMarkNetwork(12);
+        $user->setMarkBdd(16);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -43,6 +47,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(1);
+        $user->setLastname('Lafréchoux');
+        $user->setFirstname('Elouan');
+        $user->setMarkDev(13);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(19);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -56,6 +66,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(1);
+        $user->setLastname('Cambert');
+        $user->setFirstname('Killian');
+        $user->setMarkDev(17);
+        $user->setMarkNetwork(9);
+        $user->setMarkBdd(13);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -69,6 +85,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(1);
+        $user->setLastname('Crochet');
+        $user->setFirstname('Olivier');
+        $user->setMarkDev(14);
+        $user->setMarkNetwork(11);
+        $user->setMarkBdd(10);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -84,6 +106,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Battais');
+        $user->setFirstname('Erwan');
+        $user->setMarkDev(14);
+        $user->setMarkNetwork(12);
+        $user->setMarkBdd(16);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -97,6 +125,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Bernard');
+        $user->setFirstname('Alexandre');
+        $user->setMarkDev(18);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(13);
+        $user->setMarkPunctuality(30);
 
         $manager->persist($user);
 
@@ -110,6 +144,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Bigeard');
+        $user->setFirstname('Robin');
+        $user->setMarkDev(20);
+        $user->setMarkNetwork(15);
+        $user->setMarkBdd(16);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -123,6 +163,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('David');
+        $user->setFirstname('Marceau');
+        $user->setMarkDev(19);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(12);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -136,6 +182,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Delreux');
+        $user->setFirstname('Pierre');
+        $user->setMarkDev(13);
+        $user->setMarkNetwork(11);
+        $user->setMarkBdd(12);
+        $user->setMarkPunctuality(80);
 
         $manager->persist($user);
 
@@ -149,6 +201,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Drouet');
+        $user->setFirstname('Djimmy');
+        $user->setMarkDev(13);
+        $user->setMarkNetwork(9);
+        $user->setMarkBdd(11);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -162,6 +220,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Girard');
+        $user->setFirstname('François');
+        $user->setMarkDev(11);
+        $user->setMarkNetwork(10);
+        $user->setMarkBdd(12);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -175,6 +239,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Guérin');
+        $user->setFirstname('Camille');
+        $user->setMarkDev(14);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(12);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -188,6 +258,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Guibert');
+        $user->setFirstname('Valentin');
+        $user->setMarkDev(14);
+        $user->setMarkNetwork(12);
+        $user->setMarkBdd(11);
+        $user->setMarkPunctuality(80);
 
         $manager->persist($user);
 
@@ -201,6 +277,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Guillard');
+        $user->setFirstname('Corentin');
+        $user->setMarkDev(13);
+        $user->setMarkNetwork(12);
+        $user->setMarkBdd(13);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -214,6 +296,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Joulie');
+        $user->setFirstname('Antonin');
+        $user->setMarkDev(15);
+        $user->setMarkNetwork(12);
+        $user->setMarkBdd(14);
+        $user->setMarkPunctuality(45);
 
         $manager->persist($user);
 
@@ -227,6 +315,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Ka');
+        $user->setFirstname('Racine');
+        $user->setMarkDev(9);
+        $user->setMarkNetwork(8);
+        $user->setMarkBdd(7);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -240,6 +334,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Lecuit');
+        $user->setFirstname('Mattéo');
+        $user->setMarkDev(18);
+        $user->setMarkNetwork(16);
+        $user->setMarkBdd(17);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -253,6 +353,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Letembet Ambily');
+        $user->setFirstname('Claude Christian');
+        $user->setMarkDev(13);
+        $user->setMarkNetwork(11);
+        $user->setMarkBdd(12);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -266,6 +372,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Maisonneuve');
+        $user->setFirstname('Henry');
+        $user->setMarkDev(15);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(15);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -279,6 +391,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Potier');
+        $user->setFirstname('Tanguy');
+        $user->setMarkDev(15);
+        $user->setMarkNetwork(20);
+        $user->setMarkBdd(14);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -292,6 +410,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Reillon');
+        $user->setFirstname('Antonin');
+        $user->setMarkDev(10);
+        $user->setMarkNetwork(9);
+        $user->setMarkBdd(10);
+        $user->setMarkPunctuality(60);
 
         $manager->persist($user);
 
@@ -305,6 +429,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Remaud');
+        $user->setFirstname('Sébastien');
+        $user->setMarkDev(9);
+        $user->setMarkNetwork(8);
+        $user->setMarkBdd(8);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -318,6 +448,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Retière');
+        $user->setFirstname('Evan');
+        $user->setMarkDev(13);
+        $user->setMarkNetwork(11);
+        $user->setMarkBdd(13);
+        $user->setMarkPunctuality(25);
 
         $manager->persist($user);
 
@@ -331,12 +467,18 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Rigaudeau');
+        $user->setFirstname('Léo');
+        $user->setMarkDev(16);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(15);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
         $manager->flush();
 
-        // RU - Romain Scheidecker
+        // RU - Romain Schedeicker
         $user = new User();
         $user->setUsername('romain.schedeicker');
         $user->setEmail('romain.schedeicker@ynov.com');
@@ -344,6 +486,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Schedeicker');
+        $user->setFirstname('Romain');
+        $user->setMarkDev(11);
+        $user->setMarkNetwork(10);
+        $user->setMarkBdd(9);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -357,6 +505,31 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Suchot');
+        $user->setFirstname('Alexandre');
+        $user->setMarkDev(20);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(18);
+        $user->setMarkPunctuality(100);
+
+        $manager->persist($user);
+
+        $manager->flush();
+
+        // RU - Johan Teillais
+        $user = new User();
+        $user->setUsername('johan.teillais');
+        $user->setEmail('johan.teillais@ynov.com');
+        $user->setPassword(
+            $this->encoder->encodePassword($user, 'P@ssw0rd')
+        );
+        $user->setUserType(0);
+        $user->setLastname('Teillais');
+        $user->setFirstname('Johan');
+        $user->setMarkDev(12);
+        $user->setMarkNetwork(10);
+        $user->setMarkBdd(11);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -370,6 +543,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Vadillo');
+        $user->setFirstname('Matthieu');
+        $user->setMarkDev(11);
+        $user->setMarkNetwork(10);
+        $user->setMarkBdd(10);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -383,6 +562,12 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Vaucard');
+        $user->setFirstname('Adrien');
+        $user->setMarkDev(20);
+        $user->setMarkNetwork(17);
+        $user->setMarkBdd(18);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
@@ -396,9 +581,16 @@ class UserFixtures extends Fixture
             $this->encoder->encodePassword($user, 'P@ssw0rd')
         );
         $user->setUserType(0);
+        $user->setLastname('Vera');
+        $user->setFirstname('Samy');
+        $user->setMarkDev(20);
+        $user->setMarkNetwork(14);
+        $user->setMarkBdd(16);
+        $user->setMarkPunctuality(100);
 
         $manager->persist($user);
 
         $manager->flush();
+
     }
 }
