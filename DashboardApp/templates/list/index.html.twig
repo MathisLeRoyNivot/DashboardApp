@@ -33,19 +33,34 @@
 
     <div class="main-container">
         <div class="content-container">
-            <h1>Hello {{ controller_name }}! ✅</h1>
+            <h1 class="title-list">Liste des élèves</h1>
 
             <table>
-                <tr>
-                    <th>Nom d'utilisateur</th>
-                    <th>Email</th>
-                </tr>
+                <thead>
+                    <tr class="head">
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Note Développement</th>
+                        <th>Note Réseau</th>
+                        <th>Note Base de données</th>
+                        <th>Moyenne</th>
+                        <th>Taux de ponctualité</th>
+                    </tr>
+                </thead>
+
+                <tbody>
                 {% for user in users %}
-                    <tr>
-                        <td>{{ user.username }}</td>
-                        <td>{{ user.email }}</td>
+                    <tr class="body">
+                        <td>{{ user.lastname }}</td>
+                        <td>{{ user.firstname }}</td>
+                        <td>{{ user.markDev }}</td>
+                        <td>{{ user.markNetwork }}</td>
+                        <td>{{ user.markBdd }}</td>
+                        <td>{{ (user.markDev + user.markNetwork + user.markBdd)/3 }}</td>
+                        <td>{{ user.markPunctuality }}%</td>
                     </tr>
                 {% endfor %}
+                </tbody>
             </table>
 
         </div>

@@ -44,12 +44,12 @@
                         <div class="info1">
                             <div class="personnal-info">
                                 <p class="tag-info">Nom :</p>
-                                <p>'ici votre nom'</p>
+                                <p>{{ app.user.lastname }}</p>
                             </div>
 
                             <div class="personnal-info">
                                 <p class="tag-info">Prénom :</p>
-                                <p>'ici votre prénom'</p>
+                                <p>{{ app.user.firstname }}</p>
                             </div>
 
                             <div class="personnal-info">
@@ -76,7 +76,7 @@
                             </div>
                             <div class="personnal-stat">
                                 <p>Base de données</p>
-                                <progress value="15" max="20"></progress>
+                                <progress value="100" max="100"></progress>
                             </div>
                             <div class="personnal-stat">
                                 <p>Ponctualité</p>

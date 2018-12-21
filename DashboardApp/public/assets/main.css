@@ -485,6 +485,35 @@ p {
   width: 30%;
 }
 
+.title-list {
+  padding-top: 1%;
+  margin-bottom: 50px;
+}
+
 progress {
   display: inline-block;
+}
+
+table {
+  margin: 25px auto;
+}
+
+.head th {
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+.body td {
+  border: none;
+  padding: 10px 10px;
+}
+
+th {
+  padding: 0px 10px;
+  margin: 0px 10px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #808080;
 }
