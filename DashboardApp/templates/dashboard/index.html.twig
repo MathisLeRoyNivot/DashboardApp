@@ -32,34 +32,81 @@
         </nav>
 
         <div class="main-container">
+            <h2 class="hello">Bonjour {{ app.user.username }} !</h2>
             <div class="content-container">
 
-                <h2 class="hello">Bonjour {{ app.user.username }} !</h2>
+                <div class="top-screens">
+                    <div class="marks-screen">
+                        <h2 class="heading">
+                            <i class="fas fa-graduation-cap classe-logo"></i>
+                            Statistiques générales
+                        </h2>
+                        <div class="work-quality">
+                            <p>Qualité du travail</p>
+                            <div class="progress-circle over50 p55">
+                                <span>55%</span>
+                                <div class="left-half-clipper">
+                                    <div class="first50-bar"></div>
+                                    <div class="value-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plus-minus-block">
+                            <div class="plus">
+                                <p>Nouveaux élèves :
+                                    <em>+1</em>
+                                </p>
+                            </div>
+                            <div class="minus">
+                                <p>Elèves partis :
+                                    <em>-4</em>
+                                </p>
 
-                <div class="marks_screen">
-                    <h2 class="heading">
-                        <i class="fas fa-graduation-cap notes_logo"></i>
-                        Notes
-                    </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marks-screen2">
+                        <h2 class="heading">
+                            <i class="fas fa-clock ra-logo"></i>
+                            Retards & Absences
+                        </h2>
+                        <div class="ponctuality-circle">
+                            <p>Ponctualité</p>
+                            <div class="progress-circle over50 p90">
+                                <span>90%</span>
+                                <div class="left-half-clipper">
+                                    <div class="first50-bar"></div>
+                                    <div class="value-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absent-circle">
+                            <p>Absentéisme</p>
+                            <div class="progress-circle p3">
+                                <span>3%</span>
+                                <div class="left-half-clipper">
+                                    <div class="first50-bar"></div>
+                                    <div class="value-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-screens">
+                    <div class="marks-screen3">
+                        <h2 class="heading">
+                            Top 3
+                        </h2>
+                    </div>
                 </div>
 
-                <div class="marks_screen2">
-                    <h2 class="heading">
-                        <i class="fas fa-clock ra_logo"></i>
-                        Retards & Absences
-                    </h2>
-                </div>
-
-                <div class="marks_screen3">
-                    <h2 class="heading">
-                        Top 3
-                    </h2>
-                </div>
             </div>
         </div>
+    </div>
 
     </div>
-</div>
+    </div>
 
-</div>
+    </div>
 {% endblock %}
