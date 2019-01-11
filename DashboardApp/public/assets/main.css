@@ -338,38 +338,57 @@ i.nav-logo {
 
 .heading {
   color: #000;
+  padding-top: 1%;
+  margin-bottom: 2%;
+  text-decoration-line: underline;
 }
 
 .work-quality {
   display: flex;
+  height: 50%;
 }
 
-.work-quality p {
-  line-height: 150px;
+.title-work-quality {
+  margin-left: 10%;
+  margin-top: 10%;
+  font: 700;
+  font-size: 1.2em;
+  color: #000;
 }
 
 .plus-minus-block {
   display: flex;
+  height: 40%;
+}
+
+.plus-minus-block p {
+  font: 700;
+  font-size: 1.2em;
+  color: #000;
 }
 
 .plus {
   display: block;
+  width: 50%;
 }
 
 .plus p em{
-  font-size: 5em;
+  font-size: 3.8em;
   color: #219552;
   font-style: normal;
+  margin-left: 4%;
 }
 
 .minus {
   display: block;
+  width: 50%;
 }
 
 .minus p em{
-  font-size: 5em;
+  font-size: 3.8em;
   color: #c0392b;
   font-style: normal;
+  margin-left: 4%;
 }
 
 .marks-screen2 {
@@ -383,18 +402,32 @@ i.nav-logo {
   -webkit-transition: 0.2s ease-in-out;
 }
 
+.ponctuality-circle {
+  height: 45%;
+}
+
+.absent-circle {
+  height: 45%;
+}
+
+.marks-screen2 p {
+  font: 700;
+  font-size: 1.2em;
+  color: #000;
+}
+
 .marks-screen3 {
   background: #e0e3e5;
   width: 100%;
   height: 30vh;
-  overflow: hidden;
+  overflow: auto;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin-top: 3%;
   -webkit-transition: 0.2s ease-in-out;
 }
 
-.classe-logo {
+/*.classe-logo {
   font-size: 2.5em;
   margin-top: 0.5%;
   color: #000;
@@ -404,7 +437,7 @@ i.nav-logo {
   margin-top: 0.5%;
   font-size: 2.5em;
   color: #000;
-}
+}*/ 
 
 /*--------------------------------------------------------------------------------------- */
 /*--------------------------------------------------------------------------------------- */
@@ -530,12 +563,22 @@ progress {
 .progress-circle {
   font-size: 20px;
   position: relative; /* so that children can be absolutely positioned */
-  padding: 0;
+  padding: 0; 
   width: 5em;
   height: 5em;
   background-color: #F2E9E1;
   border-radius: 50%;
   line-height: 5em;
+}
+
+.quality-work {
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.ra-circles {
+  margin-left: 43%;
+  margin-top: 5%;
 }
 
 .progress-circle:after{
@@ -702,13 +745,25 @@ progress {
 .progress-circle.p98 .value-bar { transform: rotate(353deg); }
 .progress-circle.p99 .value-bar { transform: rotate(356deg); }
 .progress-circle.p100 .value-bar { transform: rotate(360deg); }
+
+
+
+/*------------------------------------------------------------------------
+-----------------List Page------------------------------------------*/
+
+
 table {
   margin: 25px auto;
 }
 
+.list-dashboard {
+  color: #000;
+  width: 90%;
+}
+
 .head th {
   padding-bottom: 10px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .body td {
@@ -724,6 +779,7 @@ th {
 
 tr:nth-child(even) {
   background-color: #808080;
+  color: #fff;
 }
 
 

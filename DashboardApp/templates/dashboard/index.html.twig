@@ -32,18 +32,20 @@
         </nav>
 
         <div class="main-container">
-            <h2 class="hello">Bonjour {{ app.user.username }} !</h2>
+            <h2 class="hello">Bonjour
+                {{ app.user.username }}
+                !</h2>
             <div class="content-container">
 
                 <div class="top-screens">
                     <div class="marks-screen">
-                        <h2 class="heading">
-                            <i class="fas fa-graduation-cap classe-logo"></i>
+                        <h2 class="heading underline">
+                            <!--<i class="fas fa-graduation-cap classe-logo"></i>-->
                             Statistiques générales
                         </h2>
                         <div class="work-quality">
-                            <p>Qualité du travail</p>
-                            <div class="progress-circle over50 p55">
+                            <p class="title-work-quality">Qualité du travail :</p>
+                            <div class="progress-circle over50 p55 quality-work">
                                 <span>55%</span>
                                 <div class="left-half-clipper">
                                     <div class="first50-bar"></div>
@@ -61,19 +63,18 @@
                                 <p>Elèves partis :
                                     <em>-4</em>
                                 </p>
-
                             </div>
                         </div>
                     </div>
 
                     <div class="marks-screen2">
                         <h2 class="heading">
-                            <i class="fas fa-clock ra-logo"></i>
+                            <!--<i class="fas fa-clock ra-logo"></i>-->
                             Retards & Absences
                         </h2>
                         <div class="ponctuality-circle">
                             <p>Ponctualité</p>
-                            <div class="progress-circle over50 p90">
+                            <div class="progress-circle over50 p90 ra-circles">
                                 <span>90%</span>
                                 <div class="left-half-clipper">
                                     <div class="first50-bar"></div>
@@ -83,7 +84,7 @@
                         </div>
                         <div class="absent-circle">
                             <p>Absentéisme</p>
-                            <div class="progress-circle p3">
+                            <div class="progress-circle p3 ra-circles">
                                 <span>3%</span>
                                 <div class="left-half-clipper">
                                     <div class="first50-bar"></div>
@@ -96,8 +97,38 @@
                 <div class="bottom-screens">
                     <div class="marks-screen3">
                         <h2 class="heading">
-                            Top 3
+                            Classement
                         </h2>
+                        <div class="scrollview">
+                            <table class="list-dashboard" onload="sortTable()">
+                                <thead>
+                                    <tr class="head">
+                                        <th>Nom</th>
+                                        <th>Prénom</th>
+                                        <th>Note Développement</th>
+                                        <th>Note Réseau</th>
+                                        <th>Note Base de données</th>
+                                        <th>Moyenne</th>
+                                        <th>Taux de ponctualité</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    {% for user in users %}
+                                        <tr class="body">
+                                            <td>{{ user.lastname }}</td>
+                                            <td>{{ user.firstname }}</td>
+                                            <td>{{ user.markDev }}</td>
+                                            <td>{{ user.markNetwork }}</td>
+                                            <td>{{ user.markBdd }}</td>
+                                            <td class="average">{{ (user.markDev + user.markNetwork + user.markBdd)/3 }}</td>
+                                            <td>{{ user.markPunctuality }}%</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
                 </div>
 
@@ -105,8 +136,8 @@
         </div>
     </div>
 
-    </div>
-    </div>
+</div>
+</div>
 
-    </div>
+</div>
 {% endblock %}
