@@ -105,11 +105,7 @@
                                     <tr class="head">
                                         <th>Nom</th>
                                         <th>Prénom</th>
-                                        <th>Note Développement</th>
-                                        <th>Note Réseau</th>
-                                        <th>Note Base de données</th>
                                         <th>Moyenne</th>
-                                        <th>Taux de ponctualité</th>
                                     </tr>
                                 </thead>
 
@@ -118,11 +114,7 @@
                                         <tr class="body">
                                             <td>{{ user.lastname }}</td>
                                             <td>{{ user.firstname }}</td>
-                                            <td>{{ user.markDev }}</td>
-                                            <td>{{ user.markNetwork }}</td>
-                                            <td>{{ user.markBdd }}</td>
                                             <td class="average">{{ (user.markDev + user.markNetwork + user.markBdd)/3 }}</td>
-                                            <td>{{ user.markPunctuality }}%</td>
                                         </tr>
                                     {% endfor %}
                                 </tbody>
